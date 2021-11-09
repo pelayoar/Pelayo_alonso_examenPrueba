@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.enviar.setOnClickListener {
 
             val intent = Intent(this, EnviarActivity::class.java)
+            intent.putExtra("texto", binding.textoPersonalizable.text.toString())
             startActivity(intent)
         }
 

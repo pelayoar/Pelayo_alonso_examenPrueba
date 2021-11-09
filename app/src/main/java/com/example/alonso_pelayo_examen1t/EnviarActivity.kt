@@ -17,6 +17,9 @@ class EnviarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val extras = intent.extras
+        binding.textView.text = extras?.getString("texto")
+
         binding.eliminar.setOnClickListener {
             binding.eliminar.isVisible = false
             binding.textView.isVisible = false
